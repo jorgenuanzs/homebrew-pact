@@ -15,7 +15,6 @@ class Pact < Formula
 
   def install
     ldflags = %W[
-      -s -w
       -X github.com/jorgenuanzs/the-pact/internal/buildinfo.Version=v#{version}
       -X github.com/jorgenuanzs/the-pact/internal/buildinfo.Commit=0e41d3de6975c5ab5b1c52b59758c92204c845a2
       -X github.com/jorgenuanzs/the-pact/internal/buildinfo.Date=2026-08-14T09:07:54Z
