@@ -1,18 +1,43 @@
-# Jorgenuanzs Pact
+# Homebrew Pact
 
-## How do I install these formulae?
+The official Homebrew tap for
+[Pact](https://github.com/jorgenuanzs/the-pact), the live coordination and
+shared project context layer for people and AI coding agents.
 
-`brew install jorgenuanzs/pact/<formula>`
+## Install
 
-Or `brew tap jorgenuanzs/pact` and then `brew install <formula>`.
+Install Pact directly from this tap:
 
-Or, in a `brew bundle` `Brewfile`:
+```sh
+brew install jorgenuanzs/pact/pact
+pact version
+```
+
+The fully qualified command trusts only the Pact formula and automatically adds
+the tap. No separate `brew tap` command is required.
+
+## Upgrade
+
+```sh
+brew update
+brew upgrade pact
+```
+
+## Uninstall
+
+```sh
+brew uninstall pact
+```
+
+## Brewfile
 
 ```ruby
 tap "jorgenuanzs/pact"
-brew "<formula>"
+brew "pact"
 ```
 
-## Documentation
+## More information
 
-`brew help`, `man brew` or check [Homebrew's documentation](https://docs.brew.sh).
+- [Pact documentation](https://github.com/jorgenuanzs/the-pact#readme)
+- [Pact releases](https://github.com/jorgenuanzs/the-pact/releases)
+- [Homebrew documentation](https://docs.brew.sh)
