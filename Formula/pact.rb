@@ -1,8 +1,8 @@
 class Pact < Formula
   desc "Live coordination and shared context for people and AI coding agents"
   homepage "https://github.com/jorgenuanzs/the-pact"
-  url "https://github.com/jorgenuanzs/the-pact/archive/refs/tags/v0.15.0.tar.gz"
-  sha256 "1a0a24ad08904cae74c3f7bcefdbc2d7e6f5f2aee8a9c5d1f37720af8d24b8a9"
+  url "https://github.com/jorgenuanzs/the-pact/archive/refs/tags/v0.16.5.tar.gz"
+  sha256 "6404ed1e4ea8e3ab8c6456bf42f35180dec77665494008dcc5cdc394109e6996"
   license "Apache-2.0"
   head "https://github.com/jorgenuanzs/the-pact.git", branch: "main"
 
