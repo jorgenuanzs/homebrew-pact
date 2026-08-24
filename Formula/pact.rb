@@ -11,6 +11,12 @@ class Pact < Formula
     strategy :github_latest
   end
 
+  bottle do
+    root_url "https://github.com/jorgenuanzs/homebrew-pact/releases/download/pact-0.16.8"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:  "18e0c4c1ab879f54a646087fe72105a39bd8a638910b3a7e53d06190d960cc50"
+    sha256 cellar: :any,                 x86_64_linux: "276239966d0ca53bfe54bd7b77ea66d61df89abeb8944011bd3e455957f30107"
+  end
+
   depends_on "go" => :build
 
   def install
