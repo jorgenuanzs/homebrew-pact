@@ -1,8 +1,8 @@
 class Pact < Formula
   desc "Live coordination and shared context for people and AI coding agents"
   homepage "https://github.com/jorgenuanzs/the-pact"
-  url "https://github.com/jorgenuanzs/the-pact/archive/refs/tags/v0.16.8.tar.gz"
-  sha256 "c870ca4e10fd0aacbc3e33266076d6d34655149910412a8a0e3a56d3be3b5614"
+  url "https://github.com/jorgenuanzs/the-pact/archive/refs/tags/v0.16.9.tar.gz"
+  sha256 "9ae7fb534c5ffec70c012a65e549715ee2dd92aa5338e6370deca2a94c5ab56b"
   license "Apache-2.0"
   head "https://github.com/jorgenuanzs/the-pact.git", branch: "main"
 
@@ -11,19 +11,13 @@ class Pact < Formula
     strategy :github_latest
   end
 
-  bottle do
-    root_url "https://github.com/jorgenuanzs/homebrew-pact/releases/download/pact-0.16.8"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:  "18e0c4c1ab879f54a646087fe72105a39bd8a638910b3a7e53d06190d960cc50"
-    sha256 cellar: :any,                 x86_64_linux: "276239966d0ca53bfe54bd7b77ea66d61df89abeb8944011bd3e455957f30107"
-  end
-
   depends_on "go" => :build
 
   def install
     ldflags = %W[
       -X github.com/jorgenuanzs/the-pact/internal/buildinfo.Version=v#{version}
-      -X github.com/jorgenuanzs/the-pact/internal/buildinfo.Commit=0f2d48e04f029133bf275fcfa11de87aa27b40d2
-      -X github.com/jorgenuanzs/the-pact/internal/buildinfo.Date=2026-08-24T13:06:36Z
+      -X github.com/jorgenuanzs/the-pact/internal/buildinfo.Commit=400b1f49d7a113dde5eae0db9aac0e43287d7d1d
+      -X github.com/jorgenuanzs/the-pact/internal/buildinfo.Date=2026-08-25T09:35:41Z
     ]
     system "go", "build", *std_go_args(ldflags: ldflags), "./cmd/pact"
   end
